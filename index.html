@@ -6,7 +6,7 @@
 <title>Harsha Talapaka — Data Scientist · ML Engineer · AI Engineer</title>
 <meta name="description" content="Harsha Talapaka — Data Scientist at Holiday Channel. I build ML systems that ship: search, recommendations, LLM pipelines, and experimentation platforms.">
 <meta property="og:title" content="Harsha Talapaka — Data Scientist · ML Engineer">
-<meta property="og:description" content="Data Scientist @ Holiday Channel — production search & recommendation, LLM pipelines, and analytics. MSCS (Machine Intelligence), GWU.">
+<meta property="og:description" content="Data Scientist @ Holiday Channel — production search & recommendation, LLM pipelines, and analytics. MSCS, GWU.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -473,7 +473,8 @@ footer{border-top:1px solid var(--ink-3);padding:34px 0;margin-top:40px}
   .contact-grid{grid-template-columns:1fr;gap:36px}
 }
 @media(max-width:640px){
-  .nav-links li:not(:last-child){display:none}
+  .nav-links li:not(.themes):not(:last-child){display:none}
+  .nav-links{gap:14px}
   .grid,.skills,.form-body{grid-template-columns:1fr}
   section{padding:84px 0}
   .stage{flex-direction:column;align-items:center;min-height:0;gap:28px}
@@ -483,6 +484,11 @@ footer{border-top:1px solid var(--ink-3);padding:34px 0;margin-top:40px}
   .xp-item::before{left:-29px}
   .xp-head{padding:18px 18px}
   .xp-body-inner{padding:18px}
+  .term-grid{grid-template-columns:1fr;min-height:0}
+  .term-files{flex-direction:row;border-right:0;border-bottom:1px solid var(--ink-3);overflow-x:auto;-webkit-overflow-scrolling:touch;padding:6px 4px}
+  .tfile{border-left:0;border-bottom:2px solid transparent;padding:9px 14px;white-space:nowrap;flex:0 0 auto}
+  .tfile.active{border-left-color:transparent;border-bottom-color:var(--c1)}
+  .term-out{padding:18px 16px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -614,7 +620,7 @@ footer{border-top:1px solid var(--ink-3);padding:34px 0;margin-top:40px}
       <div class="mq-item"><b>AI search &amp; recommendation engine</b> — in production @ Holiday Channel</div>
       <div class="mq-item"><b>LLM + RAG pipeline</b> — shipped @ Holiday Channel</div>
       <div class="mq-item"><span class="live">● 2 public LLM systems live</span> — Render &amp; Streamlit Cloud</div>
-      <div class="mq-item"><b>M.S. Computer Science</b> — Machine Intelligence · GWU</div>
+      <div class="mq-item"><b>M.S. Computer Science</b> — GWU</div>
       <div class="mq-item"><b>Top-100 Kaggle finish</b> — generative modeling</div>
       <div class="mq-item"><b>NLP ingestion parser</b> — automated pipeline @ Holiday Channel</div>
     </div>
@@ -622,7 +628,7 @@ footer{border-top:1px solid var(--ink-3);padding:34px 0;margin-top:40px}
       <div class="mq-item"><b>AI search &amp; recommendation engine</b> — in production @ Holiday Channel</div>
       <div class="mq-item"><b>LLM + RAG pipeline</b> — shipped @ Holiday Channel</div>
       <div class="mq-item"><span class="live">● 2 public LLM systems live</span> — Render &amp; Streamlit Cloud</div>
-      <div class="mq-item"><b>M.S. Computer Science</b> — Machine Intelligence · GWU</div>
+      <div class="mq-item"><b>M.S. Computer Science</b> — GWU</div>
       <div class="mq-item"><b>Top-100 Kaggle finish</b> — generative modeling</div>
       <div class="mq-item"><b>NLP ingestion parser</b> — automated pipeline @ Holiday Channel</div>
     </div>
@@ -792,14 +798,14 @@ footer{border-top:1px solid var(--ink-3);padding:34px 0;margin-top:40px}
       <button type="button" class="xp-head" aria-expanded="false" aria-controls="xp-gwu">
         <span class="xp-head-main">
           <span class="xp-when">Aug 2023 — May 2025 · Washington, DC</span>
-          <span class="xp-role">Master of Science, Computer Science <span class="degree-chip">⚡ Machine Intelligence</span></span>
+          <span class="xp-role">Master of Science, Computer Science</span>
           <span class="xp-org">George Washington University</span>
         </span>
         <span class="xp-toggle">expand <span class="chev">▾</span></span>
       </button>
       <div class="xp-body" id="xp-gwu">
         <div class="xp-body-inner">
-          <p class="xp-theme">// concentration: Machine Intelligence — where most of the experiments above started</p>
+          <p class="xp-theme">// graduate coursework — where most of the experiments above started</p>
           <ul>
             <li>Graduate coursework across the ML stack — from classical machine learning and deep learning to the systems that serve them.</li>
             <li>Built the CycleGAN Monet project, the job recommender, and the YOLOv8 detection pipeline as graduate work that outgrew the classroom.</li>
@@ -1230,10 +1236,11 @@ window.addEventListener('resize',()=>{
   const bioEl=document.getElementById('gen-bio');
   const NAME='Harsha Talapaka';
   const BIO=[
-    ['I build',0],['production AI systems',1],['—',0],['search,',0],['recommendations,',0],
-    ['and',0],['LLM-powered applications',1],['— at',0],['Holiday Channel.',1],
-    ['M.S. in Computer Science',1],['(Machine Intelligence),',0],['The George Washington University.',0],
-    ['I turn research into products',1],['people actually use.',0],
+    ['I own AI systems',1],['end-to-end',0],['—',0],['search,',0],['recommendations,',0],
+    ['and',0],['LLM pipelines',1],['running in production',0],['at',0],['Holiday Channel,',1],
+    ['across a',0],['6.5M+ item corpus.',1],
+    ['M.S. in Computer Science,',1],['The George Washington University.',0],
+    ['I move fast, ship real products,',1],['and turn research into',0],['things people actually use.',0],
     ['Outside work:',0],['building AI tools,',0],['competing on Kaggle,',0],
     ['and writing about ML and LLMs.',0]
   ];
