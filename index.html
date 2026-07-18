@@ -430,7 +430,7 @@ h1 .accent{color:var(--c1)}h1 .thin{color:var(--muted);font-weight:600}
 .soc-label::before{content:'// '}
 .soc-value{font-family:var(--font-mono);font-size:13.5px;color:var(--paper);transition:color .25s}
 .social:hover .soc-value{color:var(--c1)}
-@media(max-width:640px){.social-row{gap:26px;justify-content:space-between}.orb-ic{width:70px;height:70px}.orb-ic svg{width:29px;height:29px}.soc-value{font-size:11.5px}}
+@media(max-width:640px){.social-row{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 16px;justify-items:center}.orb-ic{width:70px;height:70px}.orb-ic svg{width:29px;height:29px}.soc-value{font-size:11.5px}}
 
 /* ---- contact ---- */
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
@@ -1239,7 +1239,7 @@ window.addEventListener('resize',()=>{
     ['I own AI systems',1],['end-to-end',0],['—',0],['search,',0],['recommendations,',0],
     ['and',0],['LLM pipelines',1],['running in production',0],['at',0],['Holiday Channel,',1],
     ['across a',0],['6.5M+ item corpus.',1],
-    ['M.S. in Computer Science,',1],['The George Washington University.',0],
+    ['M.S. in Computer Science',1],['from',0],['The George Washington University.',0],
     ['I move fast, ship real products,',1],['and turn research into',0],['things people actually use.',0],
     ['Outside work:',0],['building AI tools,',0],['competing on Kaggle,',0],
     ['and writing about ML and LLMs.',0]
